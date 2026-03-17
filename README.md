@@ -4,6 +4,10 @@
 
 Docking is a simple home-made dashboard for managing Docker containers and more. 
 
+## Why ?
+
+I wanted to create a simple and lightweight dashboard to manage my Docker containers without relying on third-party solutions like Portainer or Pterodactyl for games servers. I also wanted to create an open-source project to help others who might be looking for a similar solution or want to contribute to the project.
+
 > [!WARNING]
 > Please, do not use in production. Docking is actually in an alpha stage. It is currently unsecured and intended for local development or testing only.
 
