@@ -1,7 +1,7 @@
 {
-    "name": "docker-board",
+    "name": "docking",
     "version": "alpha-0.1.0",
-    "description": "Express server to manage Docker via the local Docker API",
+    "description": "DockerBoard is a simple home-made dashboard for managing Docker containers and more.",
     "main": "server.js",
     "scripts": {
         "start": "node server.js",

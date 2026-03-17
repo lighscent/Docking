@@ -27,5 +27,5 @@ app.use("/ui", uiRouter);
 app.get("/", (req, res) => res.redirect("/ui/containers"));
 
 app.listen(PORT, () => {
-    console.log(`docker-board listening on http://0.0.0.0:${PORT}`);
+    console.log(`Docking listening on http://0.0.0.0:${PORT}`);
 });
