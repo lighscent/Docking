@@ -1,0 +1,60 @@
+<%- include("partials/header") %>
+
+<div class="panel">
+  <div class="panel-header">
+    <div class="panel-title">All containers</div>
+    <div class="panel-actions">
+      <button class="btn" onclick="location.reload()">Refresh</button>
+    </div>
+  </div>
+
+  <% const formatUptime = (status) => {
+    if (!status) return "-";
+    const match = status.match(/^Up\s+(.+)$/);
+    return match ? match[1] : "-";
+  }; %>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Container</th>
+        <th>Image</th>
+        <th>Status</th>
+        <th>Uptime</th>
+        <th>Ports</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% containers.forEach((c) => { %>
+        <tr>
+          <td><strong><%= c.Names[0].replace(/^\//, "") %></strong><br /><small><%= c.Id.slice(0, 12) %></small></td>
+          <td><%= c.Image %></td>
+          <td><span class="badge <%= c.State %>"><%= c.State %></span></td>
+          <td><%= formatUptime(c.Status) %></td>
+          <td>
+            <% if (c.Ports?.length) { %>
+              <% c.Ports.forEach((p) => { %>
+                <div><%= p.PublicPort || "-" %> → <%= p.PrivatePort %> (<%= p.Type %>)</div>
+              <% }); %>
+            <% } else { %>
+              <span class="muted">none</span>
+            <% } %>
+          </td>
+          <td>
+            <% if (c.State !== "running") { %>
+              <button class="btn" onclick="actionContainer('<%= c.Id %>', 'start')">Start</button>
+            <% } %>
+            <% if (c.State === "running") { %>
+              <button class="btn warning" onclick="actionContainer('<%= c.Id %>', 'stop')">Stop</button>
+            <% } %>
+            <button class="btn" onclick="actionContainer('<%= c.Id %>', 'restart')">Restart</button>
+            <button class="btn danger" onclick="actionContainer('<%= c.Id %>', 'remove')">Remove</button>
+          </td>
+        </tr>
+      <% }); %>
+    </tbody>
+  </table>
+</div>
+
+<%- include("partials/footer") %>

@@ -1,0 +1,36 @@
+<%- include("partials/header") %>
+
+<div class="panel">
+  <div class="panel-header">
+    <div class="panel-title">Images</div>
+    <div class="panel-actions">
+      <button class="btn" onclick="location.reload()">Refresh</button>
+    </div>
+  </div>
+  
+  <div class="row" style="margin-bottom: 1.5rem;">
+    <input id="imageName" placeholder="e.g. node:latest" />
+    <button class="btn" onclick="pullImage()">Pull Image</button>
+  </div>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Repo:Tag</th>
+        <th>Image ID</th>
+        <th>Size</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% images.forEach((img) => { %>
+        <tr>
+          <td><strong><%= (img.RepoTags && img.RepoTags[0]) || "<none>" %></strong></td>
+          <td><code style="font-size: 0.85rem; color: #58a6ff;"><%= img.Id.slice(7, 19) %></code></td>
+          <td><%= (img.Size / 1024 / 1024).toFixed(1) %> MB</td>
+        </tr>
+      <% }) %>
+    </tbody>
+  </table>
+</div>
+
+<%- include("partials/footer") %>

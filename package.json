@@ -1,0 +1,22 @@
+{
+    "name": "docker-board",
+    "version": "0.1.0",
+    "description": "Express server to manage Docker via the local Docker API",
+    "main": "server.js",
+    "scripts": {
+        "start": "node server.js",
+        "dev": "nodemon --watch server.js --watch routes --exec node server.js"
+    },
+    "author": "xl1te",
+    "license": "UNLICENSED",
+    "dependencies": {
+        "cors": "^2.8.6",
+        "dockerode": "^4.0.9",
+        "ejs": "^5.0.1",
+        "express": "^5.2.1",
+        "morgan": "^1.10.1"
+    },
+    "devDependencies": {
+        "nodemon": "^3.1.14"
+    }
+}
