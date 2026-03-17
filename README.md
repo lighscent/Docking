@@ -1,3 +1,5 @@
+[![Node.js CI](https://img.shields.io/badge/node-%3E%3D24.0.0-brightgreen)](https://nodejs.org/) [![License](https://img.shields.io/badge/license-GPLv3-blue)](LICENSE) [![Docker](https://img.shields.io/badge/docker-ready-blue)](https://www.docker.com/) [![EJS](https://img.shields.io/badge/view-ejs-orange)](https://ejs.co/) [![Express](https://img.shields.io/badge/framework-express-lightgrey)](https://expressjs.com/)
+
 # What is this?
 
 Docker Board is a simple home-made dashboard for managing Docker containers and images.
@@ -16,6 +18,8 @@ Docker Board is a simple home-made dashboard for managing Docker containers and 
 - Create new containers
 
 ## Setup
+
+> Tested with Node.js v24.x
 
 1. Clone the repo and navigate to the project directory
 2. Install dependencies: `npm install`
