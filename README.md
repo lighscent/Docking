@@ -1,8 +1,11 @@
-[![Node.js CI](https://img.shields.io/badge/node-%3E%3D24.0.0-brightgreen)](https://nodejs.org/) [![License](https://img.shields.io/badge/license-GPLv3-blue)](LICENSE) [![Docker](https://img.shields.io/badge/docker-ready-blue)](https://www.docker.com/) [![EJS](https://img.shields.io/badge/view-ejs-orange)](https://ejs.co/) [![Express](https://img.shields.io/badge/framework-express-lightgrey)](https://expressjs.com/)
+[![Version](https://img.shields.io/badge/version-alpha-red)](https://github.com/lighscent/DockerBoard/tree/alpha) [![Node.js CI](https://img.shields.io/badge/node-%3E%3D24.0.0-brightgreen)](https://nodejs.org/) [![License](https://img.shields.io/badge/license-GPLv3-blue)](LICENSE) [![Docker](https://img.shields.io/badge/docker-ready-blue)](https://www.docker.com/) [![EJS](https://img.shields.io/badge/view-ejs-orange)](https://ejs.co/) [![Express](https://img.shields.io/badge/framework-express-lightgrey)](https://expressjs.com/)
 
 # What is this?
 
-Docker Board is a simple home-made dashboard for managing Docker containers and images.
+DockerBoard is a simple home-made dashboard for managing Docker containers and images.
+
+> [!WARNING]
+> Please, do not use in production. DockerBoard is actually in an alpha stage. It is currently unsecured and intended for local development or testing only.
 
 ## Features
 
